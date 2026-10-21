@@ -174,6 +174,9 @@ footer .brand{gap:16px}
 .st{color:var(--accent)}
 .st.sold{color:#9a4a3a}
 .empty{padding:60px 0;color:var(--muted)}
+.more-wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:6px 0 34px}
+.more-wrap [hidden]{display:none}
+.btn.ink .n{font:400 12px/1 var(--mono);letter-spacing:.08em;opacity:.8}
 
 /* look closer */
 .lc{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(32px,6vw,90px);align-items:center}
@@ -223,8 +226,9 @@ footer .brand{gap:16px}
 @media (max-width:860px){.about{grid-template-columns:minmax(0,1fr)}}
 .duo{position:relative;padding-bottom:18%}
 .duo img{display:block;border-radius:2px;box-shadow:0 30px 60px -34px rgba(40,25,10,.6)}
-.duo .a{width:78%}
-.duo .b{position:absolute;right:0;bottom:0;width:48%;border:6px solid var(--bg)}
+.duo .a{width:78%;height:auto;aspect-ratio:4/5;object-fit:cover;border:1.5px solid var(--ring);padding:8px;background:var(--panel);box-shadow:0 30px 60px -34px rgba(40,25,10,.6);filter:saturate(.92) contrast(1.03) sepia(.08)}
+.duo .b{height:auto}
+.duo .b{position:absolute;right:0;bottom:0;width:48%;border:6px solid var(--bg);box-shadow:0 24px 44px -24px rgba(0,0,0,.6)}
 .mats{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px;padding:0}
 .mats li{list-style:none;font:400 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line);padding:11px 14px;border-radius:999px}
 .draft{display:inline-block;margin-top:22px;font:400 11px/1.5 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border:1px dashed var(--line);padding:8px 12px}
@@ -408,6 +412,7 @@ html.hascur [data-tool],html.hascur [data-tool] *{cursor:none!important}
     </div>
     <p class="eyebrow" id="gcount" role="status" aria-live="polite" style="margin:-8px 0 26px"></p>
     <div class="grid" id="grid"></div>
+    <div class="more-wrap"><button class="btn ink" id="gmore" type="button" hidden></button><button class="btn" id="gless" type="button" hidden>Show fewer</button></div>
     <p class="empty" id="gempty" hidden>No works match this combination yet. Try another subject or medium.</p>
     <p class="muted" style="margin-top:8px;max-width:64ch">Prices in AUD, shown when set. Worldwide enquiries are welcome; shipping, packaging and any customs charges are confirmed individually before a sale is agreed.</p>
   </div>
@@ -454,7 +459,7 @@ html.hascur [data-tool],html.hascur [data-tool] *{cursor:none!important}
 
 <section class="band" id="about">
   <div class="in about">
-    <div class="duo rv" aria-label="Selected artworks"><img class="a" id="duoA" alt=""><img class="b" id="duoB" alt=""></div>
+    <div class="duo rv" aria-label="Shamalka with a pencil portrait of a goldfinch"><img class="a" id="duoA" src="about.jpg" width="720" height="900" alt="Shamalka, smiling and holding two pencils, in front of a brick wall" loading="lazy"><img class="b" id="duoB" alt="" loading="lazy"></div>
     <div class="rv" style="--d:.12s">
       <div class="eyebrow">About the artist</div>
       <h2 style="margin:16px 0 24px">Looking closely is <em>where it starts.</em></h2>
@@ -710,13 +715,20 @@ GAL.forEach(function(w,k){
   var a=document.createElement('article');a.className='gc rv';a.dataset.c=w.c;a.dataset.s=w.s;a.style.setProperty('--d',(k%3)*.08+'s');
   a.innerHTML='<button class="open" type="button" data-n="'+w.n+'" data-tool="'+w.tool+'" aria-label="Open '+esc(w.t)+'"><span class="im"><img src="'+w.th+'" width="'+Math.round(w.a[0]*.38)+'" height="'+Math.round(w.a[1]*.38)+'" alt="'+esc(w.alt)+'" loading="lazy"></span><div class="cap"><b>'+esc(w.t)+'</b><span>'+esc(mediumOf(w))+'</span></div><div class="gs"><span class="st'+(w.status==='sold'?' sold':'')+'">'+(w.status==='sold'?'Sold':'Available')+'</span><span>Enquire for price</span></div></button>';
   grid.appendChild(a)});
-var FM='all',FS='all';
-function setFilter(f,sub){if(f)FM=f;if(sub)FS=sub;
+var FM='all',FS='all',PAGE=12,LIM=PAGE;
+function render(){var match=0,shown=0;
   $$('.chips [data-f]').forEach(function(o){o.setAttribute('aria-pressed',o.dataset.f===FM?'true':'false')});
   $$('.chips [data-s]').forEach(function(o){o.setAttribute('aria-pressed',o.dataset.s===FS?'true':'false')});
-  var shown=0;$$('.gc',grid).forEach(function(c){var ok=(FM==='all'||c.dataset.c===FM)&&(FS==='all'||c.dataset.s===FS);c.hidden=!ok;if(ok){shown++;c.classList.add('vis')}});
-  $('#gcount').textContent=shown+(shown===1?' work':' works');$('#gempty').hidden=shown>0;
+  $$('.gc',grid).forEach(function(c){var ok=(FM==='all'||c.dataset.c===FM)&&(FS==='all'||c.dataset.s===FS);if(ok)match++;var vis=ok&&shown<LIM;c.hidden=!vis;if(vis){shown++;c.classList.add('vis')}});
+  $('#gcount').textContent=shown<match?('Showing '+shown+' of '+match+' works'):(match+(match===1?' work':' works'));
+  $('#gempty').hidden=match>0;
+  var more=$('#gmore'),less=$('#gless'),left=match-shown;
+  more.hidden=left<=0;more.innerHTML='Show '+Math.min(PAGE,left)+' more works <span class="n">'+left+' left</span>';
+  less.hidden=!(left<=0&&match>PAGE);
   order=GAL.filter(function(w){return (FM==='all'||w.c===FM)&&(FS==='all'||w.s===FS)})}
+function setFilter(f,sub){if(f)FM=f;if(sub)FS=sub;LIM=PAGE;render()}
+$('#gmore').addEventListener('click',function(){var firstNew=$$('.gc:not([hidden])',grid).length;LIM+=PAGE;render();var cards=$$('.gc:not([hidden])',grid);if(cards[firstNew]&&cards[firstNew].querySelector('button'))cards[firstNew].querySelector('button').focus({preventScroll:true})});
+$('#gless').addEventListener('click',function(){LIM=PAGE;render();$('#gallery').scrollIntoView({behavior:reduce?'auto':'smooth'})});
 $$('.chips [data-f]').forEach(function(c){c.addEventListener('click',function(){setFilter(c.dataset.f)})});
 $$('.chips [data-s]').forEach(function(c){c.addEventListener('click',function(){setFilter(null,c.dataset.s)})});
 
@@ -766,7 +778,7 @@ document.addEventListener('keydown',function(e){if(e.key!=='Tab')return;var box=
 (function(){var h='';[[13,'Pet portrait'],[8,'Portrait'],[35,'Landscape']].forEach(function(p){var w=byN(p[0]);h+='<figure><img src="'+w.th+'" alt="'+esc(w.alt)+'" loading="lazy"><figcaption>'+p[1]+'</figcaption></figure>'});$('#ex').innerHTML=h;
   var so=[['Instagram','@shamalka_fineart','https://www.instagram.com/shamalka_fineart/',15],['TikTok','@shamalka_fineart','https://www.tiktok.com/@shamalka_fineart',30],['YouTube','@ShamalkaFineArt','https://www.youtube.com/@ShamalkaFineArt',26],['Facebook','Shamalka.fineart','https://www.facebook.com/Shamalka.fineart/',13]];
   $('#so').innerHTML=so.map(function(s){var w=byN(s[3]);return '<a href="'+s[2]+'" target="_blank" rel="noopener" aria-label="'+s[0]+' '+s[1]+'"><img src="'+w.th+'" alt="" loading="lazy"><div class="tx"><span>'+s[0]+'</span><small>'+s[1]+'</small></div></a>'}).join('');
-  var a=byN(8),b=byN(15);var A=$('#duoA'),B=$('#duoB');A.src=a.th;A.alt=a.alt;B.src=b.th;B.alt=b.alt;A.loading=B.loading='lazy'})();
+  var b=byN(15),B=$('#duoB');B.src=b.th;B.alt=b.alt})();
 
 /* ---------- forms (preview only) ---------- */
 var sel=$('#a-art');W.forEach(function(w){var o=document.createElement('option');o.value=w.n;o.textContent=w.t+' ('+mediumOf(w)+')';sel.appendChild(o)});
