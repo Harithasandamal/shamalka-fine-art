@@ -15,15 +15,16 @@
   --bg:#F4EFE6; --fg:#45382F; --muted:#6d6053; --line:#D8C7AE; --panel:#EBE3D4;
   --accent:#5A6554; --accent-fg:#F4EFE6;
   --night:#251e18; --night-2:#2e261f; --night-fg:#F4EFE6; --night-muted:#b4a791; --night-line:#4a3f34; --accent-night:#c5d0b0;
+  --ring:#d8c7ae; --ring-gap:#251e18; --ring-glow:rgba(216,199,174,.28);
   --cu-line:#2b211a; --cu-wood:#d9a066; --cu-tipw:#f4d3a4; --cu-lead:#2d3035; --cu-fer:#cfd5d8; --cu-erase:#f7a1bb; --cu-metal:#d8dde0; --cu-handle:#7a8a6a; --cu-ink:#2b211a; --cu-cheek:#ffd0dc; --cu-halo:rgba(255,250,240,.9); --cu-shadow:rgba(40,25,10,.35);
   --display:'Bodoni Moda','Didot','Bodoni 72',Georgia,serif;
   --sans:'Hanken Grotesk','Helvetica Neue',Arial,sans-serif;
   --mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;
 }
 @media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){--bg:#1d1814;--fg:#efe7d9;--muted:#b4a791;--line:#40362d;--panel:#272019;--accent:#c5d0b0;--accent-fg:#1d1814;--cu-line:#f3eadb;--cu-wood:#e3ad72;--cu-tipw:#f7ddb8;--cu-lead:#3a3c40;--cu-fer:#b9c0c4;--cu-erase:#f3a0bb;--cu-metal:#c5ccd0;--cu-handle:#a9b894;--cu-ink:#2b211a;--cu-cheek:#ffd0dc;--cu-halo:rgba(0,0,0,.6);--cu-shadow:rgba(0,0,0,.6);color-scheme:dark}
+  :root:not([data-theme="light"]){--bg:#1d1814;--fg:#efe7d9;--muted:#b4a791;--line:#40362d;--panel:#272019;--accent:#c5d0b0;--accent-fg:#1d1814;--ring:#c5d0b0;--ring-gap:#1d1814;--ring-glow:rgba(197,208,176,.3);--cu-line:#f3eadb;--cu-wood:#e3ad72;--cu-tipw:#f7ddb8;--cu-lead:#3a3c40;--cu-fer:#b9c0c4;--cu-erase:#f3a0bb;--cu-metal:#c5ccd0;--cu-handle:#a9b894;--cu-ink:#2b211a;--cu-cheek:#ffd0dc;--cu-halo:rgba(0,0,0,.6);--cu-shadow:rgba(0,0,0,.6);color-scheme:dark}
 }
-:root[data-theme="dark"]{--bg:#1d1814;--fg:#efe7d9;--muted:#b4a791;--line:#40362d;--panel:#272019;--accent:#c5d0b0;--accent-fg:#1d1814;--cu-line:#f3eadb;--cu-wood:#e3ad72;--cu-tipw:#f7ddb8;--cu-lead:#3a3c40;--cu-fer:#b9c0c4;--cu-erase:#f3a0bb;--cu-metal:#c5ccd0;--cu-handle:#a9b894;--cu-ink:#2b211a;--cu-cheek:#ffd0dc;--cu-halo:rgba(0,0,0,.6);--cu-shadow:rgba(0,0,0,.6);color-scheme:dark}
+:root[data-theme="dark"]{--bg:#1d1814;--fg:#efe7d9;--muted:#b4a791;--line:#40362d;--panel:#272019;--accent:#c5d0b0;--accent-fg:#1d1814;--ring:#c5d0b0;--ring-gap:#1d1814;--ring-glow:rgba(197,208,176,.3);--cu-line:#f3eadb;--cu-wood:#e3ad72;--cu-tipw:#f7ddb8;--cu-lead:#3a3c40;--cu-fer:#b9c0c4;--cu-erase:#f3a0bb;--cu-metal:#c5ccd0;--cu-handle:#a9b894;--cu-ink:#2b211a;--cu-cheek:#ffd0dc;--cu-halo:rgba(0,0,0,.6);--cu-shadow:rgba(0,0,0,.6);color-scheme:dark}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -62,12 +63,17 @@ p{margin:0}
 .hd .in{display:flex;align-items:center;justify-content:space-between;height:84px;transition:height .45s cubic-bezier(.2,.7,.2,1)}
 .hd.sm{background:color-mix(in srgb,var(--night) 82%,transparent);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-color:var(--night-line)}
 .hd.sm .in{height:60px}
-.brand{font:italic 400 24px/1 var(--display);text-decoration:none;letter-spacing:-.01em;white-space:nowrap}
+.brand{display:inline-flex;align-items:center;gap:12px;font:italic 400 24px/1 var(--display);text-decoration:none;letter-spacing:-.01em;white-space:nowrap}
+.avatar{flex:none;width:46px;height:46px;border-radius:50%;display:block;object-fit:cover;background:var(--ring-gap);border:1.5px solid var(--ring);padding:2px;box-shadow:0 0 0 1px var(--ring-gap),0 6px 18px -6px var(--ring-glow);filter:saturate(.92) contrast(1.04) sepia(.1);transition:transform .5s cubic-bezier(.2,.7,.2,1),filter .5s}
+.brand:hover .avatar{transform:rotate(-6deg) scale(1.06);filter:saturate(1) contrast(1.05) sepia(0)}
+.hd.sm .avatar{width:38px;height:38px}
+.avatar.lg{width:64px;height:64px}
+footer .brand{gap:16px}
 .nav{display:flex;gap:clamp(14px,2.6vw,36px);align-items:center}
 .nav a{position:relative;text-decoration:none;font:400 13px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;padding:10px 0}
 .nav a::after{content:"";position:absolute;left:0;right:0;bottom:4px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .45s cubic-bezier(.2,.7,.2,1)}
 .nav a:hover::after{transform:scaleX(1);transform-origin:left}
-@media (max-width:520px){.brand{font-size:19px}.nav a:nth-child(2){display:none}.nav{gap:16px}}
+@media (max-width:520px){.brand{font-size:18px;gap:9px}.avatar{width:36px;height:36px}.hd.sm .avatar{width:34px;height:34px}.nav a:nth-child(2){display:none}.nav{gap:16px}}
 @media (max-width:760px){.nav{gap:14px}.nav a{font-size:11px;letter-spacing:.08em}.nav a.opt{display:none}.hd .in{height:64px}.brand{font-size:21px}}
 
 /* hero */
@@ -303,6 +309,7 @@ html.hascur [data-tool],html.hascur [data-tool] *{cursor:none!important}
 @media (hover:none),(pointer:coarse){.cur,.dot{display:none}.lp{cursor:auto}}
 
 @media (prefers-reduced-motion:reduce){
+  .avatar{transition:none}.brand:hover .avatar{transform:none}
   html{scroll-behavior:auto}
   .marq-track,.hero-media::before{animation:none}
   .js .rv,.js .ln>span,.js .hero .rise{opacity:1;transform:none;transition:none}
@@ -317,7 +324,7 @@ html.hascur [data-tool],html.hascur [data-tool] *{cursor:none!important}
 
 <header class="hd" id="hd">
   <div class="in">
-    <a class="brand" href="#top" aria-label="Shamalka Fine Art, home">Shamalka Fine Art</a>
+    <a class="brand" href="#top" aria-label="Shamalka Fine Art, home"><img class="avatar" src="avatar.jpg" width="46" height="46" alt="Shamalka, the artist"><span>Shamalka Fine Art</span></a>
     <nav class="nav" aria-label="Main">
       <a href="#gallery">Gallery</a>
       <a href="#commissions">Commissions</a>
@@ -529,7 +536,7 @@ html.hascur [data-tool],html.hascur [data-tool] *{cursor:none!important}
   <div class="in">
     <div class="foot">
       <div>
-        <div class="brand" style="font-size:30px">Shamalka Fine Art</div>
+        <div class="brand" style="font-size:30px"><img class="avatar lg" src="avatar.jpg" width="64" height="64" alt="Shamalka, the artist" loading="lazy"><span>Shamalka Fine Art</span></div>
         <p style="margin-top:12px;color:var(--night-muted)">Melbourne, Australia<br><a href="mailto:spshamalka@gmail.com">spshamalka@gmail.com</a><br><a href="tel:+61406755823">0406 755 823</a></p>
       </div>
       <div>
