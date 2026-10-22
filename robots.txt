@@ -1,40 +1,50 @@
+# Search and answer crawlers are welcome. AI model-training crawlers are not permitted.
 User-agent: *
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Applebot
 Allow: /
 
 User-agent: GPTBot
 Disallow: /
 
-User-agent: ChatGPT-User
-Disallow: /
-
-User-agent: OAI-SearchBot
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
-
-User-agent: Google-Extended
+User-agent: ClaudeBot
 Disallow: /
 
 User-agent: anthropic-ai
 Disallow: /
 
-User-agent: ClaudeBot
-Disallow: /
-
 User-agent: Claude-Web
 Disallow: /
 
-User-agent: PerplexityBot
-Disallow: /
-
-User-agent: Bytespider
+User-agent: Google-Extended
 Disallow: /
 
 User-agent: Applebot-Extended
 Disallow: /
 
-User-agent: FacebookBot
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
 Disallow: /
 
 User-agent: Diffbot
@@ -47,6 +57,12 @@ User-agent: Omgilibot
 Disallow: /
 
 User-agent: cohere-ai
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: meta-externalagent
 Disallow: /
 
 Sitemap: https://shamalkafineart.com.au/sitemap.xml
