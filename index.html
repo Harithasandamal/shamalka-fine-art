@@ -1,14 +1,29 @@
 <!doctype html>
-<html lang="en"><head>
+<html lang="en-AU"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="Shamalka Fine Art: original pencil, charcoal, watercolour and acrylic portraits, pets, wildlife and landscapes. Melbourne, Australia.">
+<title>Shamalka Fine Art | Original portraits, pets, wildlife and landscapes, Melbourne</title>
+<meta name="description" content="Original pencil, charcoal, watercolour and acrylic artwork by Shamalka in Melbourne. Browse the gallery, enquire about available pieces, or commission a portrait, pet or landscape.">
 <meta name="theme-color" content="#251e18">
-<title>Shamalka Fine Art</title>
-<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="author" content="Shamalka">
+<meta name="copyright" content="© 2026 Shamalka Fine Art. All rights reserved.">
+<meta name="robots" content="index,follow,noai,noimageai">
+<link rel="canonical" href="https://shamalkafineart.com.au/">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Shamalka Fine Art">
+<meta property="og:title" content="Shamalka Fine Art | Original portraits, pets, wildlife and landscapes">
+<meta property="og:description" content="Original pencil, charcoal, watercolour and acrylic artwork from Melbourne. Enquire about available pieces or commission your own.">
+<meta property="og:url" content="https://shamalkafineart.com.au/">
+<meta property="og:image" content="https://shamalkafineart.com.au/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "name": "Shamalka Fine Art", "copyrightHolder": {"@type": "Person", "name": "Shamalka"}, "copyrightYear": 2026, "license": "https://shamalkafineart.com.au/#copyright", "url": "https://shamalkafineart.com.au/"}, {"@type": "Person", "name": "Shamalka", "jobTitle": "Artist", "url": "https://shamalkafineart.com.au/", "email": "spshamalka@gmail.com", "telephone": "+61406755823", "address": {"@type": "PostalAddress", "addressLocality": "Melbourne", "addressCountry": "AU"}, "sameAs": ["https://www.instagram.com/shamalka_fineart/", "https://www.tiktok.com/@shamalka_fineart", "https://www.youtube.com/@ShamalkaFineArt", "https://www.facebook.com/Shamalka.fineart/"]}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..600&family=Hanken+Grotesk:wght@300..600&family=IBM+Plex+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Hanken+Grotesk:wght@300..600&family=IBM+Plex+Mono:wght@400&display=swap">
 <style>
 /* Concept: a warm, intimate artist's studio (PRD palette: ivory, beige, olive, brown). Her work is the colour. */
 :root{
@@ -17,7 +32,7 @@
   --night:#251e18; --night-2:#2e261f; --night-fg:#F4EFE6; --night-muted:#b4a791; --night-line:#4a3f34; --accent-night:#c5d0b0;
   --ring:#d8c7ae; --ring-gap:#251e18; --ring-glow:rgba(216,199,174,.28);
   --cu-line:#2b211a; --cu-wood:#d9a066; --cu-tipw:#f4d3a4; --cu-lead:#2d3035; --cu-fer:#cfd5d8; --cu-erase:#f7a1bb; --cu-metal:#d8dde0; --cu-handle:#7a8a6a; --cu-ink:#2b211a; --cu-cheek:#ffd0dc; --cu-halo:rgba(255,250,240,.9); --cu-shadow:rgba(40,25,10,.35);
-  --display:'Bodoni Moda','Didot','Bodoni 72',Georgia,serif;
+  --display:'Fraunces','Iowan Old Style','Palatino Linotype',Georgia,serif;
   --sans:'Hanken Grotesk','Helvetica Neue',Arial,sans-serif;
   --mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;
 }
@@ -40,8 +55,8 @@ a{color:inherit}
 .muted{color:var(--muted)}
 .eyebrow{font:400 12px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
 .night .eyebrow{color:var(--night-muted)}
-h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance;letter-spacing:-.015em}
-h2{font-size:clamp(34px,5vw,64px);line-height:1.05}
+h1,h2,h3{font-family:var(--display);font-weight:420;margin:0;text-wrap:balance;letter-spacing:-.012em}
+h2{font-size:clamp(32px,4.6vw,58px);line-height:1.08}
 h2 em,h1 em{font-style:italic;color:var(--accent)}
 .night h2 em,.hero h1 em{color:var(--accent-night)}
 p{margin:0}
@@ -86,7 +101,7 @@ footer .brand{gap:16px}
 .hero::before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(37,30,24,.55),transparent 70%)}
 .hero-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(32px,5vw,80px);align-items:center}
 @media (max-width:900px){.hero{padding-block:104px 56px}.hero-grid{grid-template-columns:minmax(0,1fr)}}
-.hero h1{font-size:clamp(44px,7vw,104px);line-height:.98;letter-spacing:-.025em;margin:20px 0 26px}
+.hero h1{font-size:clamp(40px,6.1vw,92px);line-height:1.02;letter-spacing:-.02em;margin:20px 0 26px;font-weight:400}
 .ln{display:block;overflow:hidden;padding-bottom:.08em}
 .ln>span{display:block}
 .hero .lede{color:#d9cfbd;margin-bottom:34px}
@@ -312,7 +327,54 @@ html.hascur [data-tool],html.hascur [data-tool] *{cursor:none!important}
 @keyframes dotf{from{opacity:.85;transform:translate(-50%,-50%) scale(1)}to{opacity:0;transform:translate(-50%,-10%) scale(.3)}}
 @media (hover:none),(pointer:coarse){.cur,.dot{display:none}.lp{cursor:auto}}
 
+/* hero controls */
+.hc-ctl{display:flex;align-items:center;gap:10px}
+.hc-ctl button{width:44px;height:44px;border-radius:50%;border:1px solid var(--night-line);background:transparent;color:var(--night-fg);cursor:pointer;font-size:17px;transition:background .3s,color .3s}
+.hc-ctl button:hover{background:var(--night-fg);color:var(--night)}
+.hc-n{font:400 12px/1 var(--mono);letter-spacing:.12em;min-width:64px;text-align:center}
+.hc-stage{touch-action:pan-y}
+.hs{--in:5%;--out:-5%;transform:translateX(var(--in)) scale(1.02);transition:opacity 1s ease,transform 1.1s cubic-bezier(.2,.7,.2,1)}
+.hs.out{transform:translateX(var(--out)) scale(1.02)}
+.hc-stage[data-dir=prev] .hs{--in:-5%;--out:5%}
+/* social tiles */
+.so .ic{position:absolute;top:14px;right:14px;z-index:2;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:rgba(25,18,12,.45);border:1px solid rgba(244,239,230,.38);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:background .3s,transform .4s}
+.so .ic svg{width:17px;height:17px;fill:#f4efe6;display:block}
+.so a:hover .ic{background:rgba(244,239,230,.25);transform:scale(1.08)}
+/* gallery filters */
+.filters{display:grid;gap:22px;margin:0 0 26px;width:100%}
+.flabel{font:400 11px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:11px}
+.mcards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+@media (max-width:900px){.mcards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.mcard{display:flex;align-items:center;gap:13px;text-align:left;padding:9px 12px 9px 9px;border:1px solid var(--line);border-radius:14px;background:transparent;color:var(--fg);cursor:pointer;min-height:76px;transition:border-color .3s,background .3s,box-shadow .3s;font:inherit}
+.mcard:hover{border-color:var(--fg)}
+.mcard[aria-pressed="true"]{border-color:var(--fg);box-shadow:inset 0 0 0 1px var(--fg);background:var(--panel)}
+.mcard .mt{width:56px;height:56px;border-radius:9px;overflow:hidden;flex:none;background:var(--panel);display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.mcard .mt img{width:100%;height:100%;object-fit:cover;display:block}
+.mcard .mt.one{display:block}
+.mcard b{display:block;font:italic 420 18px/1.15 var(--display)}
+.mcard small{display:block;margin-top:3px;font:400 11px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gc .im{position:relative}
+.badge{position:absolute;top:10px;left:10px;z-index:1;font:400 10px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;padding:7px 9px;border-radius:999px;background:rgba(25,18,12,.78);color:#f4efe6}
+.badge.sold{background:#8f3f31}
+.st.sample{color:var(--muted)}
+.btn[hidden]{display:none}
+/* look closer strip */
+.strip{position:relative;overflow:hidden;touch-action:pan-y;cursor:grab;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);user-select:none}
+.strip.drag{cursor:grabbing}
+.strip-track{display:flex;width:max-content;will-change:transform;padding-block:6px}
+.th{all:unset;box-sizing:border-box;flex:none;height:108px;margin-right:12px;cursor:inherit;border-radius:3px;overflow:hidden;opacity:.62;outline-offset:3px;transition:opacity .3s,box-shadow .3s}
+.th img{display:block;height:100%;width:auto;pointer-events:none;-webkit-user-drag:none}
+.th:hover{opacity:1}
+.th[aria-current="true"]{opacity:1;box-shadow:0 0 0 2px var(--accent-night)}
+.th:focus-visible{outline:2px solid var(--accent-night)}
+.lp-cap{margin-top:14px;font:400 12px/1.5 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--night-muted)}
+.lp-cap b{color:var(--night-fg);font-weight:400}
+.about p+p{margin-top:16px}
+.about .bio{font-size:clamp(16px,1.3vw,18px);max-width:58ch;color:inherit}
+.about .bio.first{font-size:clamp(17px,1.5vw,20px)}
+.ref-note{font-size:13px;color:var(--night-muted);margin-top:6px}
 @media (prefers-reduced-motion:reduce){
+  .hs,.hs.out{transform:none}
   .avatar{transition:none}.brand:hover .avatar{transform:none}
   html{scroll-behavior:auto}
   .marq-track,.hero-media::before{animation:none}
@@ -321,9 +383,14 @@ html.hascur [data-tool],html.hascur [data-tool] *{cursor:none!important}
   .hs{transition:opacity .01s;transform:none}
   .gc .im img,.mc img,.so img,.rail .fc img{transition:none}
 }
+
+/* image protection (deterrent only) */
+img{-webkit-user-drag:none;user-drag:none;-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}
+.legal a,.legal button{color:inherit}
 </style>
 </head>
 <body>
+<noscript><p style="padding:24px;font:16px/1.6 sans-serif">This website shows its gallery with JavaScript. Please enable it, or email <a href="mailto:spshamalka@gmail.com">spshamalka@gmail.com</a> to see Shamalka’s work.</p></noscript>
 
 
 <header class="hd" id="hd">
@@ -362,7 +429,7 @@ html.hascur [data-tool],html.hascur [data-tool] *{cursor:none!important}
       </div>
       <div class="hc rise" style="--d:.6s" id="hc" aria-roledescription="carousel" aria-label="Featured artworks">
         <div class="hc-stage" id="hcStage"></div>
-        <div class="hc-bar"><div class="hc-cap" id="hcCap" aria-live="polite"></div><div class="dots" id="hcDots"></div></div>
+        <div class="hc-bar"><div class="hc-cap" id="hcCap" aria-live="polite"></div><div class="hc-ctl"><button type="button" id="hcPrev" aria-label="Previous artwork">←</button><span class="hc-n" id="hcN" aria-hidden="true"></span><button type="button" id="hcNext" aria-label="Next artwork">→</button></div></div>
       </div>
     </div>
   </div>
@@ -380,41 +447,36 @@ html.hascur [data-tool],html.hascur [data-tool] *{cursor:none!important}
   <div class="rail" id="rail" tabindex="0" aria-label="Featured works, scroll sideways"></div>
 </section>
 
-<section class="band" id="mediums" style="padding-top:0">
-  <div class="in">
-    <div class="sec-head"><div class="rv"><div class="eyebrow">Explore by medium</div><h2 style="margin-top:16px">Three ways of <em>looking.</em></h2></div></div>
-    <div class="med rv" id="med"></div>
-  </div>
-</section>
 
 <div class="in"><svg class="pencil" viewBox="0 0 1200 14" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M0 8 C90 3 170 12 300 7 S520 3 650 8 S900 12 1050 6 S1160 7 1200 8"/></svg></div>
 
 <section class="band" id="gallery">
   <div class="in">
-    <div class="sec-head">
-      <div class="rv"><div class="eyebrow">The gallery</div><h2 style="margin-top:16px">Every piece, <em>one at a time.</em></h2></div>
-      <div class="filters rv" style="--d:.1s">
-        <div class="chips" role="group" aria-label="Filter by medium">
-          <button class="chip" aria-pressed="true" data-f="all">All mediums</button>
-          <button class="chip" aria-pressed="false" data-f="pencil">Pencil &amp; charcoal</button>
-          <button class="chip" aria-pressed="false" data-f="water">Watercolour</button>
-          <button class="chip" aria-pressed="false" data-f="acrylic">Acrylic</button>
-        </div>
-        <div class="chips" role="group" aria-label="Filter by subject">
+    <div class="sec-head"><div class="rv"><div class="eyebrow">The gallery</div><h2 style="margin-top:16px">Every piece, <em>one at a time.</em></h2></div></div>
+    <div class="filters rv" style="--d:.1s">
+      <div><div class="flabel" id="fl-med">Medium</div><div class="mcards" id="mcards" role="group" aria-labelledby="fl-med"></div></div>
+      <div><div class="flabel" id="fl-sub">Subject</div>
+        <div class="chips" role="group" aria-labelledby="fl-sub">
           <button class="chip" aria-pressed="true" data-s="all">All subjects</button>
           <button class="chip" aria-pressed="false" data-s="portrait">Portraits</button>
           <button class="chip" aria-pressed="false" data-s="pet">Pets</button>
           <button class="chip" aria-pressed="false" data-s="wild">Wildlife</button>
           <button class="chip" aria-pressed="false" data-s="land">Landscapes</button>
           <button class="chip" aria-pressed="false" data-s="still">Flowers &amp; fruit</button>
-        </div>
-      </div>
+        </div></div>
+      <div><div class="flabel" id="fl-av">Availability</div>
+        <div class="chips" role="group" aria-labelledby="fl-av">
+          <button class="chip" aria-pressed="true" data-a="all">Everything</button>
+          <button class="chip" aria-pressed="false" data-a="available">Available</button>
+          <button class="chip" aria-pressed="false" data-a="sold">Sold</button>
+          <button class="chip" aria-pressed="false" data-a="sample">Portfolio samples</button>
+        </div></div>
     </div>
-    <p class="eyebrow" id="gcount" role="status" aria-live="polite" style="margin:-8px 0 26px"></p>
+    <p class="eyebrow" id="gcount" role="status" aria-live="polite" style="margin:0 0 26px"></p>
     <div class="grid" id="grid"></div>
     <div class="more-wrap"><button class="btn ink" id="gmore" type="button" hidden></button><button class="btn" id="gless" type="button" hidden>Show fewer</button></div>
     <p class="empty" id="gempty" hidden>No works match this combination yet. Try another subject or medium.</p>
-    <p class="muted" style="margin-top:8px;max-width:64ch">Prices in AUD, shown when set. Worldwide enquiries are welcome; shipping, packaging and any customs charges are confirmed individually before a sale is agreed.</p>
+    <p class="muted" style="margin-top:8px;max-width:64ch">Pieces marked Available can be enquired about and bought; Sold pieces stay here as part of the portfolio, and portfolio samples show the kind of work that can be commissioned. Prices are in AUD and confirmed on enquiry. Worldwide enquiries are welcome; shipping, packaging and any customs charges are confirmed individually before a sale is agreed.</p>
   </div>
 </section>
 
@@ -423,10 +485,14 @@ html.hascur [data-tool],html.hascur [data-tool] *{cursor:none!important}
     <div class="rv">
       <div class="eyebrow">Look closer</div>
       <h2 style="margin:16px 0 22px">Every <em>line</em> is drawn by hand.</h2>
-      <p class="lede muted">Move across the artwork to look at the detail up close. On a phone, press and drag.</p>
-      <div class="picks" id="picks" role="group" aria-label="Choose an artwork to inspect"></div>
+      <p class="lede muted">Choose any piece from the strip below, then move across the artwork to look at the detail up close. On a phone, press and drag.</p>
+      <p class="lp-cap" id="lpCap" aria-live="polite"></p>
     </div>
     <div class="rv" style="--d:.15s"><div class="lp" id="lp"><img id="lpImg" alt="" src=""><div class="lens" id="lens"></div><div class="hint">Hover to magnify</div></div></div>
+  </div>
+  <div class="in" style="margin-top:clamp(36px,5vw,64px)">
+    <div class="eyebrow" style="margin-bottom:14px">Drag the strip, or tap a piece to zoom in</div>
+    <div class="strip" id="strip" role="group" aria-label="All artworks. Select one to inspect"><div class="strip-track" id="stripTrack"></div></div>
   </div>
 </section>
 
@@ -459,13 +525,14 @@ html.hascur [data-tool],html.hascur [data-tool] *{cursor:none!important}
 
 <section class="band" id="about">
   <div class="in about">
-    <div class="duo rv" aria-label="Shamalka with a pencil portrait of a goldfinch"><img class="a" id="duoA" src="about.jpg" width="720" height="900" alt="Shamalka, smiling and holding two pencils, in front of a brick wall" loading="lazy"><img class="b" id="duoB" alt="" loading="lazy"></div>
+    <div class="duo rv" aria-label="Shamalka, with her painting Still Waters"><img class="a" id="duoA" src="about.jpg" width="720" height="900" alt="Shamalka, smiling and holding two pencils, in front of a brick wall" loading="lazy"><img class="b" id="duoB" alt="" loading="lazy"></div>
     <div class="rv" style="--d:.12s">
       <div class="eyebrow">About the artist</div>
       <h2 style="margin:16px 0 24px">Looking closely is <em>where it starts.</em></h2>
-      <p class="lede">Shamalka is a Melbourne-based artist who draws and paints portraits, pets, wildlife and flowers in pencil, charcoal, watercolour and acrylic.</p>
-      <ul class="mats"><li>Pencil &amp; charcoal</li><li>Watercolour</li><li>Acrylic</li></ul>
-      <span class="draft">Her story, inspiration and approach go here, in her own words</span>
+      <p class="bio first">I’m Shamalka, a self-taught artist from Sri Lanka, now living in Australia. My love for art began in middle school, but life led me down a different path, and I became an engineer. Years later, through looking inward and searching for my life’s purpose, I found my way back to the passion that had always been a part of me.</p>
+      <p class="bio">For me, art is a way of expressing what words cannot. Through my work, I hope to share the beauty I see in people, animals, and nature. Even in the little things we often overlook. More than anything, I want my art to touch hearts, bring comfort, and help people see the world with a little more wonder. As you explore my art, I hope you find a little piece of yourself here, too.</p>
+      <p class="bio" style="font-style:italic">Welcome to my world. I’m glad you’re here.</p>
+      <ul class="mats"><li>Pencil &amp; charcoal</li><li>Watercolour</li><li>Acrylic</li><li>Melbourne, Australia</li></ul>
       <div style="margin-top:30px;display:flex;gap:14px;flex-wrap:wrap"><a class="btn ink" data-mag href="#gallery">See the gallery <span class="arrow">→</span></a><a class="btn" data-mag href="#commissions">Enquire about a commission</a></div>
     </div>
   </div>
@@ -507,12 +574,12 @@ html.hascur [data-tool],html.hascur [data-tool] *{cursor:none!important}
         <div class="full"><label for="c-sub">Subject or description <i>*</i></label><textarea id="c-sub" required placeholder="Who or what is it, and what should it feel like?"></textarea></div>
         <div><label for="c-size">Preferred size</label><input id="c-size" placeholder="e.g. A3, or ask for advice"></div>
         <div><label for="c-bud">Budget (AUD)</label><input id="c-bud" inputmode="numeric" placeholder="Optional"></div>
-        <div><label for="c-photo">Reference photo</label><input id="c-photo" type="file" accept="image/*"></div>
+        <div><label for="c-photo">Link to a reference photo</label><input id="c-photo" type="url" inputmode="url" placeholder="Optional: a Drive or Dropbox link"></div>
         <div><label for="c-date">Preferred deadline</label><input id="c-date" type="date"></div>
         <div class="full"><label for="c-more">Additional information</label><textarea id="c-more" style="min-height:70px"></textarea></div>
         <div class="hp" aria-hidden="true"><label>Leave empty<input tabindex="-1" autocomplete="off" name="website"></label></div>
         <div class="full" style="display:flex;flex-wrap:wrap;gap:18px;align-items:center"><button class="btn solid" data-mag type="submit">Send commission enquiry <span class="arrow">→</span></button><span class="status" role="status" aria-live="polite"></span></div>
-        <p class="full muted" style="font-size:14px">This is a request, not a confirmed order. Pricing, availability and delivery are discussed with the artist.</p>
+        <p class="full muted" style="font-size:14px">This is a request, not a confirmed order. Pricing, availability and delivery are discussed with the artist. Photos can be emailed to her once she replies.</p>
       </form>
 
       <form id="f-artwork" role="tabpanel" aria-labelledby="t-artwork" novalidate hidden data-kind="artwork">
@@ -551,20 +618,10 @@ html.hascur [data-tool],html.hascur [data-tool] *{cursor:none!important}
           <a href="https://www.youtube.com/@ShamalkaFineArt" target="_blank" rel="noopener">YouTube @ShamalkaFineArt</a>
           <a href="https://www.facebook.com/Shamalka.fineart/" target="_blank" rel="noopener">Facebook</a>
         </div>
-        <div class="soc" style="margin-top:22px"><a href="#gallery">Gallery</a><a href="#commissions">Commissions</a><a href="#about">About</a><a href="#contact">Contact</a><button class="linkbtn" id="privBtn" type="button">Privacy</button></div>
+        <div class="soc" style="margin-top:22px"><a href="#gallery">Gallery</a><a href="#commissions">Commissions</a><a href="#about">About</a><a href="#contact">Contact</a><button class="linkbtn" id="privBtn" type="button">Privacy &amp; terms</button></div>
       </div>
     </div>
-    <details class="swap">
-      <summary>Preview notes: still to confirm before launch</summary>
-      <ul>
-        <li><code>Artwork titles</code> are working titles taken from what is drawn. Shamalka to confirm real titles, mediums (some are best guesses), sizes, descriptions, prices and sold status.</li>
-        <li><code>Hero video</code> (optional): set <code>HERO_VIDEO_SRC</code> to her clip.</li>
-        <li><code>About page</code> story, studio photo and domain.</li>
-        <li><code>Testimonials</code> stay hidden until genuine, permitted feedback is supplied.</li>
-        <li><code>Forms</code> are not connected yet, so nothing is sent. Privacy and terms wording to be confirmed.</li>
-      </ul>
-    </details>
-    <div class="legal"><span>© 2026 Shamalka Fine Art</span><span>Design preview</span></div>
+        <div class="legal"><span>© 2026 Shamalka Fine Art. All artwork and images are the artist’s original work and may not be copied, reproduced or used without written permission.</span><span>Melbourne, Australia</span></div>
   </div>
 </footer>
 
@@ -576,27 +633,34 @@ html.hascur [data-tool],html.hascur [data-tool] *{cursor:none!important}
       <div class="eyebrow" style="color:#b4a791" id="dtCat"></div>
       <h2 id="dtT"></h2>
       <dl class="dl" id="dtDl"></dl>
-      <p class="note">Click the image to zoom. This is an enquiry, not a checkout: Shamalka confirms availability, delivery and total cost with you first.</p>
-      <div class="dt-nav"><button class="btn solid" id="dtEnq" data-mag type="button">Enquire about this piece <span class="arrow">→</span></button></div>
+      <p class="note" id="dtNote">Click the image to zoom. This is an enquiry, not a checkout: Shamalka confirms availability, delivery and the total cost with you before any sale.</p>
+      <div class="dt-nav"><button class="btn solid" id="dtEnq" data-mag type="button">Enquire to buy <span class="arrow">→</span></button><button class="btn solid" id="dtComm" data-mag type="button" hidden>Commission something similar <span class="arrow">→</span></button></div>
       <div class="dt-nav"><button class="btn" id="dtPrev" type="button" aria-label="Previous artwork">← Prev</button><button class="btn" id="dtNext" type="button" aria-label="Next artwork">Next →</button></div>
       <div class="more" id="dtMore" aria-label="More work"></div>
     </div>
   </div>
 </div>
 
-<div class="dlg" id="dlg" role="dialog" aria-modal="true" aria-label="Privacy">
+<div class="dlg" id="dlg" role="dialog" aria-modal="true" aria-label="Privacy and terms">
   <button class="x" id="dlgx" aria-label="Close">✕</button>
   <div class="box">
-    <div class="eyebrow" style="color:#b4a791">Draft</div>
-    <h2>Privacy</h2>
+    <div class="eyebrow" style="color:#b4a791">Privacy and terms</div>
+    <h2>How your details are used</h2>
     <ul>
-      <li>We collect only what you send through the forms: your name, email address, message and, if you add one, a reference photo.</li>
-      <li>It is used to reply to you and to discuss your enquiry. Enquiries are never published on this website.</li>
-      <li>Reference photos are not displayed or reused for other purposes without your permission.</li>
-      <li>Testimonials and customer names appear only with permission.</li>
-      <li>To ask about your information, contact the artist using the details on the Contact section.</li>
+      <li>We collect only what you send through the forms: your name, email address, message and, if you add one, a link to a reference photo.</li>
+      <li>Forms are delivered to the artist’s email through the form service FormSubmit. Nothing you send is published on this website.</li>
+      <li>It is used to reply to you and to discuss your enquiry. Reference photos are not displayed or reused without your permission.</li>
+      <li>No payment is taken on this website. A form is an enquiry, not an order. Availability, final price, delivery and payment are agreed with the artist by email before a sale is confirmed.</li>
+      <li>Sold pieces cannot be purchased. Portfolio samples are not for sale, but similar work can be commissioned.</li>
+      <li>To ask about your information, email spshamalka@gmail.com.</li>
     </ul>
-    <p style="margin-top:22px;color:#b4a791;font-size:14px">Final wording will be confirmed against the artist's actual practices and applicable Australian and international obligations.</p>
+    <h2 style="margin-top:28px">Copyright and use of images</h2>
+    <ul>
+      <li>All artworks, photographs of artworks, text and design on this website are © 2026 Shamalka Fine Art. All rights reserved. Under the Copyright Act 1968 (Cth) the copyright in each artwork belongs to the artist, and owning or buying a physical piece does not transfer copyright.</li>
+      <li>You may not copy, download, screenshot for reuse, reproduce, print, sell, edit, post online or otherwise use any image from this website without prior written permission from the artist.</li>
+      <li>You may not use any content to train, fine-tune or feed artificial intelligence or machine learning systems, or to scrape or harvest it by automated means.</li>
+      <li>Infringement may result in takedown notices to hosts and platforms, and legal action. To request permission or licensing, or to report misuse, email spshamalka@gmail.com.</li>
+    </ul>
   </div>
 </div>
 
@@ -607,6 +671,9 @@ html.hascur [data-tool],html.hascur [data-tool] *{cursor:none!important}
 
 <script>
 document.documentElement.classList.add('js');
+document.addEventListener('contextmenu',function(e){if(e.target&&e.target.closest&&e.target.closest('img,.hs,.zoom,.lp,.strip,.th,.card,.fc,.gi,#dt'))e.preventDefault()});
+document.addEventListener('dragstart',function(e){if(e.target&&e.target.tagName==='IMG')e.preventDefault()});
+document.addEventListener('keydown',function(e){if((e.ctrlKey||e.metaKey)&&(e.key==='s'||e.key==='S'))e.preventDefault()});
 (function(){
 'use strict';
 /* ====== SWAP POINT: optional hero background video ====== */
@@ -618,6 +685,7 @@ function clamp(v,a,b){return Math.max(a,Math.min(b,v))}
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;')}
 
 /* ---------- artwork data (working titles; Shamalka to set the real ones) ---------- */
+var SITE='https://shamalkafineart.com.au/';
 var CATS={pencil:'Pencil & charcoal',water:'Watercolour',acrylic:'Acrylic'};
 var SUBJ={portrait:'Portraits',pet:'Pets',wild:'Wildlife',land:'Landscapes',still:'Flowers & fruit'};
 var W=[
@@ -658,34 +726,46 @@ var W=[
  {n:35,t:"Sakura Season",c:'water',s:'land',a:[2000,1457],alt:"Painting of cherry blossoms beside a river beneath a snow-capped mountain"},
  {n:36,t:"Still Waters",c:'acrylic',s:'land',a:[1632,1198],alt:"Acrylic painting of a calm lake reflecting pine trees and distant mountains"}
 ];
-W.forEach(function(w){w.id='a'+(w.n<10?'0':'')+w.n;w.tool=w.c==='pencil'?'pencil':'brush';w.status='available';w.l=w.id+'-l.jpg';w.th=w.id+'-t.jpg'});
+var STAT={1:['sample'],2:['available','A4'],3:['sample'],4:['sample'],5:['sample'],6:['sample'],7:['sample'],8:['sample'],9:['sample'],10:['available','Letter'],11:['sample'],12:['available','A3'],13:['available','Arch A'],14:['sample'],15:['sample'],16:['sample'],17:['available','A4'],18:['available','A4'],19:['available','A4'],20:['available','A4'],21:['sample'],22:['available','Arch A'],23:['sample'],24:['sample'],25:['available','A4'],26:['available'],27:['sold'],28:['sold'],29:['sold'],30:['sold'],31:['sold'],32:['sold'],33:['sample'],34:['sample'],35:['sold'],36:['sold']};
+var SIZES={'A4':'A4 (210 × 297 mm)','A3':'A3 (297 × 420 mm)','Letter':'US Letter (8.5 × 11 in)','Arch A':'Arch A (9 × 12 in)'};
+var STLAB={available:'Available',sold:'Sold',sample:'Portfolio sample'};
+W.forEach(function(w){w.id='a'+(w.n<10?'0':'')+w.n;w.tool=w.c==='pencil'?'pencil':'brush';w.status=STAT[w.n][0];w.size=STAT[w.n][1]?SIZES[STAT[w.n][1]]:'';w.l=w.id+'-l.jpg';w.th=w.id+'-t.jpg'});
 function byN(n){return W.filter(function(w){return w.n===n})[0]}
 var GAL=[13,15,2,8,26,14,18,11,30,4,17,12,22,3,32,21,10,5,27,35,1,19,29,9,25,7,34,6,31,20,24,36,16,23,28,33].map(byN);
-var FEAT=[13,15,26,8,30,17,14,18,2,35].map(byN);
-var HERO=[13,26,15,8,30,17].map(byN);
+var FEAT=GAL.slice();
+var HERO=GAL.slice();
 function mediumOf(w){return w.c==='pencil'?'Pencil & charcoal':CATS[w.c]}
 
 /* marquee */
 (function(){var words=['Pencil & charcoal','Watercolour','Acrylic','Portraits','Pets','Wildlife','Landscapes','Flowers & fruit'],h='';
   for(var k=0;k<2;k++)words.forEach(function(w){h+='<span><b>✦</b>'+esc(w)+'</span>'});$('#marq').innerHTML=h})();
 
-/* ---------- hero carousel ---------- */
+/* ---------- hero carousel: every work, endless loop, auto + arrows + swipe ---------- */
 (function(){
-  var st=$('#hcStage'),dots=$('#hcDots'),cap=$('#hcCap'),i=0,timer=null,paused=false,visible=true;
+  var st=$('#hcStage'),cap=$('#hcCap'),num=$('#hcN'),hc=$('#hc'),N=HERO.length,i=0,timer=null,paused=false,visible=true,slides=[],last=null;
   HERO.forEach(function(w,k){
-    var s=document.createElement('div');s.className='hs'+(k===0?' on':'');s.setAttribute('role','group');s.setAttribute('aria-label',(k+1)+' of '+HERO.length);
-    s.innerHTML='<button type="button" data-tool="'+w.tool+'" data-n="'+w.n+'" aria-label="Open '+esc(w.t)+'"><img src="'+w.th.replace('-t','-l')+'" width="'+w.a[0]+'" height="'+w.a[1]+'" alt="'+esc(w.alt)+'"'+(k>0?' loading="lazy"':'')+'></button>';
-    st.appendChild(s);
-    var d=document.createElement('button');d.type='button';d.setAttribute('aria-label','Show '+w.t);d.dataset.k=k;dots.appendChild(d);
-  });
-  function show(n){i=(n+HERO.length)%HERO.length;$$('.hs',st).forEach(function(s,k){s.classList.toggle('on',k===i);s.setAttribute('aria-hidden',k===i?'false':'true');$$('button',s).forEach(function(b){b.tabIndex=k===i?0:-1})});
-    $$('button',dots).forEach(function(d,k){d.setAttribute('aria-current',k===i?'true':'false')});
-    cap.innerHTML='<b>'+esc(HERO[i].t)+'</b> · '+esc(mediumOf(HERO[i]))}
-  function tick(){clearInterval(timer);if(reduce)return;timer=setInterval(function(){if(!paused&&visible&&!document.hidden)show(i+1)},5600)}
-  dots.addEventListener('click',function(e){var b=e.target.closest('button');if(b){show(+b.dataset.k);tick()}});
-  var hc=$('#hc');['mouseenter','focusin'].forEach(function(ev){hc.addEventListener(ev,function(){paused=true})});['mouseleave','focusout'].forEach(function(ev){hc.addEventListener(ev,function(){paused=false})});
+    var d=document.createElement('div');d.className='hs';d.setAttribute('role','group');d.setAttribute('aria-roledescription','slide');d.setAttribute('aria-label',(k+1)+' of '+N);
+    d.innerHTML='<button type="button" data-tool="'+w.tool+'" data-n="'+w.n+'" aria-label="Open '+esc(w.t)+'"><img data-src="'+w.l+'" width="'+w.a[0]+'" height="'+w.a[1]+'" alt="'+esc(w.alt)+'" decoding="async"></button>';
+    st.appendChild(d);slides.push(d)});
+  function load(k){var im=slides[((k%N)+N)%N].querySelector('img');if(!im.getAttribute('src'))im.src=im.dataset.src}
+  function show(n,dir){var prev=i;i=((n%N)+N)%N;st.dataset.dir=dir<0?'prev':'next';
+    load(i);load(i+1);load(i-1);
+    slides.forEach(function(s,k){s.classList.remove('out');var on=k===i;s.classList.toggle('on',on);s.setAttribute('aria-hidden',on?'false':'true');var b=s.querySelector('button');b.tabIndex=on?0:-1});
+    if(last!==null&&last!==i)slides[last].classList.add('out');
+    last=i;
+    cap.innerHTML='<b>'+esc(HERO[i].t)+'</b> · '+esc(mediumOf(HERO[i]))+(HERO[i].status==='sold'?' · Sold':'');
+    num.textContent=(i+1<10?'0':'')+(i+1)+' / '+N}
+  function tick(){clearInterval(timer);if(reduce)return;timer=setInterval(function(){if(!paused&&visible&&!document.hidden)show(i+1,1)},5200)}
+  $('#hcNext').onclick=function(){show(i+1,1);tick()};$('#hcPrev').onclick=function(){show(i-1,-1);tick()};
+  ['mouseenter','focusin'].forEach(function(ev){hc.addEventListener(ev,function(){paused=true})});['mouseleave','focusout'].forEach(function(ev){hc.addEventListener(ev,function(){paused=false})});
+  hc.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){show(i+1,1);tick()}else if(e.key==='ArrowLeft'){show(i-1,-1);tick()}});
+  (function(){var sx=0,sy=0,down=false,moved=false;
+    st.addEventListener('pointerdown',function(e){down=true;moved=false;sx=e.clientX;sy=e.clientY});
+    st.addEventListener('pointerup',function(e){if(!down)return;down=false;var dx=e.clientX-sx,dy=e.clientY-sy;if(Math.abs(dx)>46&&Math.abs(dx)>Math.abs(dy)*1.4){moved=true;show(i+(dx<0?1:-1),dx<0?1:-1);tick()}});
+    st.addEventListener('pointercancel',function(){down=false});
+    st.addEventListener('click',function(e){if(moved){e.stopPropagation();e.preventDefault();moved=false}},true)})();
   new IntersectionObserver(function(e){visible=e[0].isIntersecting},{threshold:.05}).observe($('#hero'));
-  show(0);tick();
+  show(0,1);tick();
   if(HERO_VIDEO_SRC){var v=$('#heroVideo');v.src=HERO_VIDEO_SRC;v.addEventListener('canplay',function(){v.classList.add('on');if(!reduce)v.play().catch(function(){})},{once:true});v.addEventListener('error',function(){v.classList.remove('on')})}
 })();
 
@@ -695,42 +775,45 @@ FEAT.forEach(function(w){
   var d=document.createElement('div');d.className='fc';
   d.innerHTML='<button class="open" type="button" data-n="'+w.n+'" data-tool="'+w.tool+'" aria-label="Open '+esc(w.t)+'"><img src="'+w.th+'" width="'+Math.round(w.a[0]*.38)+'" height="'+Math.round(w.a[1]*.38)+'" alt="'+esc(w.alt)+'" loading="lazy" draggable="false"><div class="cap"><b>'+esc(w.t)+'</b><span>'+esc(mediumOf(w))+'</span></div></button>';
   rail.appendChild(d)});
-$('#next').onclick=function(){rail.scrollBy({left:rail.clientWidth*.7,behavior:reduce?'auto':'smooth'})};
-$('#prev').onclick=function(){rail.scrollBy({left:-rail.clientWidth*.7,behavior:reduce?'auto':'smooth'})};
+$('#next').onclick=function(){var max=rail.scrollWidth-rail.clientWidth;if(rail.scrollLeft>=max-6)rail.scrollTo({left:0,behavior:reduce?'auto':'smooth'});else rail.scrollBy({left:rail.clientWidth*.7,behavior:reduce?'auto':'smooth'})};
+$('#prev').onclick=function(){var max=rail.scrollWidth-rail.clientWidth;if(rail.scrollLeft<=6)rail.scrollTo({left:max,behavior:reduce?'auto':'smooth'});else rail.scrollBy({left:-rail.clientWidth*.7,behavior:reduce?'auto':'smooth'})};
 (function(){var down=false,sx=0,sl=0,moved=0;
   rail.addEventListener('pointerdown',function(e){if(e.pointerType==='touch')return;down=true;moved=0;sx=e.clientX;sl=rail.scrollLeft;rail.classList.add('drag')});
   window.addEventListener('pointermove',function(e){if(!down)return;var dx=e.clientX-sx;moved=Math.max(moved,Math.abs(dx));rail.scrollLeft=sl-dx});
   window.addEventListener('pointerup',function(){down=false;rail.classList.remove('drag')});
   rail.addEventListener('click',function(e){if(moved>6){e.stopPropagation();e.preventDefault();moved=0}},true)})();
 
-/* ---------- mediums ---------- */
-(function(){var pick={pencil:8,water:17,acrylic:26},h='';
-  ['pencil','water','acrylic'].forEach(function(k){var w=byN(pick[k]),n=W.filter(function(x){return x.c===k}).length;h+='<button type="button" class="mc" data-f="'+k+'"><img src="'+w.th+'" alt="" loading="lazy"><div><h3>'+esc(CATS[k])+'</h3><small>'+n+(n===1?' work':' works')+' →</small></div></button>'});
-  $('#med').innerHTML=h;
-  $('#med').addEventListener('click',function(e){var b=e.target.closest('.mc');if(!b)return;setFilter(b.dataset.f,'all');$('#gallery').scrollIntoView({behavior:reduce?'auto':'smooth'})})})();
-
 /* ---------- gallery ---------- */
 var grid=$('#grid');
 GAL.forEach(function(w,k){
-  var a=document.createElement('article');a.className='gc rv';a.dataset.c=w.c;a.dataset.s=w.s;a.style.setProperty('--d',(k%3)*.08+'s');
-  a.innerHTML='<button class="open" type="button" data-n="'+w.n+'" data-tool="'+w.tool+'" aria-label="Open '+esc(w.t)+'"><span class="im"><img src="'+w.th+'" width="'+Math.round(w.a[0]*.38)+'" height="'+Math.round(w.a[1]*.38)+'" alt="'+esc(w.alt)+'" loading="lazy"></span><div class="cap"><b>'+esc(w.t)+'</b><span>'+esc(mediumOf(w))+'</span></div><div class="gs"><span class="st'+(w.status==='sold'?' sold':'')+'">'+(w.status==='sold'?'Sold':'Available')+'</span><span>Enquire for price</span></div></button>';
+  var a=document.createElement('article');a.className='gc rv';a.dataset.c=w.c;a.dataset.s=w.s;a.dataset.a=w.status;a.style.setProperty('--d',(k%3)*.08+'s');
+  var badge=w.status==='sold'?'<span class="badge sold">Sold</span>':(w.status==='sample'?'<span class="badge">Portfolio</span>':'');
+  var line2=w.status==='available'?'Enquire for price':(w.status==='sold'?'No longer available':'Commissions welcome');
+  a.innerHTML='<button class="open" type="button" data-n="'+w.n+'" data-tool="'+w.tool+'" aria-label="Open '+esc(w.t)+', '+STLAB[w.status]+'"><span class="im">'+badge+'<img src="'+w.th+'" width="'+Math.round(w.a[0]*.38)+'" height="'+Math.round(w.a[1]*.38)+'" alt="'+esc(w.alt)+'" loading="lazy"></span><div class="cap"><b>'+esc(w.t)+'</b><span>'+esc(mediumOf(w))+'</span></div><div class="gs"><span class="st '+w.status+'">'+STLAB[w.status]+(w.size?' · '+esc(w.size.split(' (')[0]):'')+'</span><span>'+line2+'</span></div></button>';
   grid.appendChild(a)});
-var FM='all',FS='all',PAGE=12,LIM=PAGE;
+/* medium cards (thumbnail = a piece in that medium) */
+(function(){var pick={pencil:8,water:14,acrylic:13},h='';
+  var total=W.length;
+  h+='<button type="button" class="mcard" data-f="all" aria-pressed="true"><span class="mt">'+[8,14,13,26].map(function(n){return '<img src="'+byN(n).th+'" alt="" loading="lazy">'}).join('')+'</span><span><b>All mediums</b><small>'+total+' works</small></span></button>';
+  ['pencil','water','acrylic'].forEach(function(k){var n=W.filter(function(x){return x.c===k}).length;
+    h+='<button type="button" class="mcard" data-f="'+k+'" aria-pressed="false"><span class="mt one"><img src="'+byN(pick[k]).th+'" alt="" loading="lazy"></span><span><b>'+esc(CATS[k])+'</b><small>'+n+(n===1?' work':' works')+'</small></span></button>'});
+  $('#mcards').innerHTML=h})();
+var FM='all',FS='all',FA='all',PAGE=12,LIM=PAGE;
 function render(){var match=0,shown=0;
-  $$('.chips [data-f]').forEach(function(o){o.setAttribute('aria-pressed',o.dataset.f===FM?'true':'false')});
-  $$('.chips [data-s]').forEach(function(o){o.setAttribute('aria-pressed',o.dataset.s===FS?'true':'false')});
-  $$('.gc',grid).forEach(function(c){var ok=(FM==='all'||c.dataset.c===FM)&&(FS==='all'||c.dataset.s===FS);if(ok)match++;var vis=ok&&shown<LIM;c.hidden=!vis;if(vis){shown++;c.classList.add('vis')}});
+  $$('.filters [data-f]').forEach(function(o){o.setAttribute('aria-pressed',o.dataset.f===FM?'true':'false')});
+  $$('.filters [data-s]').forEach(function(o){o.setAttribute('aria-pressed',o.dataset.s===FS?'true':'false')});
+  $$('.filters [data-a]').forEach(function(o){o.setAttribute('aria-pressed',o.dataset.a===FA?'true':'false')});
+  $$('.gc',grid).forEach(function(c){var ok=(FM==='all'||c.dataset.c===FM)&&(FS==='all'||c.dataset.s===FS)&&(FA==='all'||c.dataset.a===FA);if(ok)match++;var vis=ok&&shown<LIM;c.hidden=!vis;if(vis){shown++;c.classList.add('vis')}});
   $('#gcount').textContent=shown<match?('Showing '+shown+' of '+match+' works'):(match+(match===1?' work':' works'));
   $('#gempty').hidden=match>0;
   var more=$('#gmore'),less=$('#gless'),left=match-shown;
   more.hidden=left<=0;more.innerHTML='Show '+Math.min(PAGE,left)+' more works <span class="n">'+left+' left</span>';
   less.hidden=!(left<=0&&match>PAGE);
-  order=GAL.filter(function(w){return (FM==='all'||w.c===FM)&&(FS==='all'||w.s===FS)})}
-function setFilter(f,sub){if(f)FM=f;if(sub)FS=sub;LIM=PAGE;render()}
+  order=GAL.filter(function(w){return (FM==='all'||w.c===FM)&&(FS==='all'||w.s===FS)&&(FA==='all'||w.status===FA)})}
+function setFilter(f,sub,av){if(f)FM=f;if(sub)FS=sub;if(av)FA=av;LIM=PAGE;render()}
 $('#gmore').addEventListener('click',function(){var firstNew=$$('.gc:not([hidden])',grid).length;LIM+=PAGE;render();var cards=$$('.gc:not([hidden])',grid);if(cards[firstNew]&&cards[firstNew].querySelector('button'))cards[firstNew].querySelector('button').focus({preventScroll:true})});
 $('#gless').addEventListener('click',function(){LIM=PAGE;render();$('#gallery').scrollIntoView({behavior:reduce?'auto':'smooth'})});
-$$('.chips [data-f]').forEach(function(c){c.addEventListener('click',function(){setFilter(c.dataset.f)})});
-$$('.chips [data-s]').forEach(function(c){c.addEventListener('click',function(){setFilter(null,c.dataset.s)})});
+$('.filters').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;if(b.dataset.f)setFilter(b.dataset.f);else if(b.dataset.s)setFilter(null,b.dataset.s);else if(b.dataset.a)setFilter(null,null,b.dataset.a)});
 
 /* ---------- artwork detail (individual page as overlay, with #art-N link) ---------- */
 var dt=$('#dt'),cur=null,lastFocus=null,order=GAL;setFilter();
@@ -739,8 +822,11 @@ function openArt(n,fromHash){
   dt.classList.add('open');document.body.style.overflow='hidden';
   var img=$('#dtImg');img.src=w.l;img.alt=w.alt;img.width=w.a[0];img.height=w.a[1];$('#zoom').classList.remove('z');img.style.transform='';$('#zoom').dataset.tool=w.tool;
   $('#dtCat').textContent=mediumOf(w);$('#dtT').textContent=w.t;
-  $('#dtDl').innerHTML='<div><dt>Medium</dt><dd>'+esc(mediumOf(w))+'</dd></div><div><dt>Availability</dt><dd class="st'+(w.status==='sold'?' sold':'')+'" style="color:'+(w.status==='sold'?'#e0907a':'#c5d0b0')+'">'+(w.status==='sold'?'Sold':'Available')+'</dd></div><div><dt>Price</dt><dd>'+(w.status==='sold'?'—':'Enquire (AUD)')+'</dd></div>';
-  var enq=$('#dtEnq');enq.disabled=w.status==='sold';enq.firstChild.textContent=w.status==='sold'?'This piece has sold':'Enquire about this piece ';
+  var col=w.status==='sold'?'#e0907a':(w.status==='available'?'#c5d0b0':'#b4a791');
+  var price=w.status==='available'?'Enquire (AUD)':(w.status==='sold'?'Sold':'Not for sale');
+  $('#dtDl').innerHTML='<div><dt>Medium</dt><dd>'+esc(mediumOf(w))+'</dd></div>'+(w.size?'<div><dt>Size</dt><dd>'+esc(w.size)+'</dd></div>':'')+'<div><dt>Availability</dt><dd style="color:'+col+'">'+STLAB[w.status]+'</dd></div><div><dt>Price</dt><dd>'+price+'</dd></div>';
+  $('#dtEnq').hidden=w.status!=='available';$('#dtComm').hidden=w.status==='available';
+  $('#dtNote').textContent=w.status==='available'?'Click the image to zoom. This is an enquiry, not a checkout: Shamalka confirms availability, delivery and the total cost with you before any sale.':(w.status==='sold'?'This piece has found a home. Shamalka can create something similar for you.':'This is a portfolio sample and is not for sale. Shamalka can create something similar for you.');
   var m='';order.forEach(function(o){m+='<button type="button" data-n="'+o.n+'" aria-label="'+esc(o.t)+'"'+(o.n===w.n?' aria-current="true"':'')+'><img src="'+o.th+'" alt=""></button>'});$('#dtMore').innerHTML=m;
   try{history.replaceState(null,'','#art-'+w.n)}catch(e){}
   if(!fromHash)$('#dtx').focus();
@@ -752,21 +838,39 @@ $('#dtx').onclick=closeArt;$('#dtPrev').onclick=function(){step(-1)};$('#dtNext'
 $('#dtMore').addEventListener('click',function(e){var b=e.target.closest('button');if(b)openArt(+b.dataset.n,true)});
 document.addEventListener('keydown',function(e){if(dt.classList.contains('open')){if(e.key==='Escape')closeArt();else if(e.key==='ArrowRight')step(1);else if(e.key==='ArrowLeft')step(-1)}else if(dlg.classList.contains('open')&&e.key==='Escape')closeDlg()});
 (function(){var z=$('#zoom'),im=$('#dtImg');
-  function origin(e){var r=z.getBoundingClientRect(),ir=im.getBoundingClientRect();im.style.transformOrigin=((e.clientX-ir.left)/ir.width*100)+'% '+((e.clientY-ir.top)/ir.height*100)+'%'}
+  function origin(e){var ir=im.getBoundingClientRect();im.style.transformOrigin=((e.clientX-ir.left)/ir.width*100)+'% '+((e.clientY-ir.top)/ir.height*100)+'%'}
   z.addEventListener('click',function(e){var on=z.classList.toggle('z');if(on){origin(e);im.style.transform='scale(2.2)'}else im.style.transform=''});
   z.addEventListener('mousemove',function(e){if(z.classList.contains('z'))origin(e)})})();
-$('#dtEnq').addEventListener('click',function(){if(!cur||cur.status==='sold')return;var t=cur.n;closeArt();setMode('artwork');$('#a-art').value=String(t);$('#contact').scrollIntoView({behavior:reduce?'auto':'smooth'});setTimeout(function(){$('#a-name').focus({preventScroll:true})},500)});
+function goContact(mode,after){closeArt();setMode(mode);$('#contact').scrollIntoView({behavior:reduce?'auto':'smooth'});setTimeout(function(){after();},500)}
+$('#dtEnq').addEventListener('click',function(){if(!cur||cur.status!=='available')return;var t=cur.n;goContact('artwork',function(){$('#a-art').value=String(t);$('#a-name').focus({preventScroll:true})})});
+$('#dtComm').addEventListener('click',function(){if(!cur)return;var w=cur;goContact('commission',function(){var ta=$('#c-sub');if(!ta.value)ta.value='I love “'+w.t+'” and would like something similar. ';$('#c-name').focus({preventScroll:true})})});
 /* focus trap */
 document.addEventListener('keydown',function(e){if(e.key!=='Tab')return;var box=dt.classList.contains('open')?dt:(dlg.classList.contains('open')?dlg:null);if(!box)return;
-  var f=$$('button:not([disabled]),a[href],[tabindex]:not([tabindex="-1"])',box).filter(function(x){return x.offsetParent!==null||x===box});if(!f.length)return;
+  var f=$$('button:not([disabled]):not([hidden]),a[href],[tabindex]:not([tabindex="-1"])',box).filter(function(x){return x.offsetParent!==null||x===box});if(!f.length)return;
   var a=f[0],b=f[f.length-1];if(e.shiftKey&&document.activeElement===a){e.preventDefault();b.focus()}else if(!e.shiftKey&&document.activeElement===b){e.preventDefault();a.focus()}});
 
-/* ---------- look closer (loupe) ---------- */
-(function(){var lp=$('#lp'),im=$('#lpImg'),lens=$('#lens'),Z=2.6,sel=11,picks=[[11,'Eye'],[13,'Cat'],[30,'Leopard'],[15,'Goldfinch'],[14,'Blueberries'],[3,'Portrait']];
-  var pk=$('#picks');picks.forEach(function(p){var b=document.createElement('button');b.type='button';b.className='chip';b.style.color='var(--night-fg)';b.style.borderColor='var(--night-line)';b.textContent=p[1];b.dataset.n=p[0];pk.appendChild(b)});
-  function use(n){var w=byN(n);sel=n;im.src=w.l;im.alt=w.alt;im.width=w.a[0];im.height=w.a[1];lens.style.backgroundImage='url('+w.l+')';
-    $$('.chip',pk).forEach(function(c){var on=+c.dataset.n===n;c.setAttribute('aria-pressed',on?'true':'false');c.style.background=on?'var(--night-fg)':'transparent';c.style.color=on?'var(--night)':'var(--night-fg)'})}
-  pk.addEventListener('click',function(e){var b=e.target.closest('.chip');if(b)use(+b.dataset.n)});use(11);
+/* ---------- look closer: loupe + slow draggable strip of every piece ---------- */
+(function(){var lp=$('#lp'),im=$('#lpImg'),lens=$('#lens'),Z=2.6,cap=$('#lpCap'),strip=$('#strip'),track=$('#stripTrack');
+  var h='';for(var c=0;c<2;c++)GAL.forEach(function(w){h+='<button type="button" class="th" data-n="'+w.n+'" data-tool="'+w.tool+'" aria-label="Zoom into '+esc(w.t)+'"'+(c?' aria-hidden="true" tabindex="-1"':'')+' style="aspect-ratio:'+w.a[0]+'/'+w.a[1]+'"><img src="'+w.th+'" alt="" loading="lazy" draggable="false"></button>'});
+  track.innerHTML=h;
+  function use(n){var w=byN(n);im.src=w.l;im.alt=w.alt;im.width=w.a[0];im.height=w.a[1];lens.style.backgroundImage='url('+w.l+')';
+    cap.innerHTML='<b>'+esc(w.t)+'</b> · '+esc(mediumOf(w));
+    $$('.th',track).forEach(function(t){t.setAttribute('aria-current',+t.dataset.n===n?'true':'false')})}
+  use(11);
+  var half=0,pos=0,drag=false,sx=0,sp=0,moved=0,hover=false,vis=false,resume=0,t0=0;
+  function measure(){half=track.scrollWidth/2}
+  function apply(){if(!half)measure();if(!half)return;pos=((pos%half)+half)%half;track.style.transform='translate3d('+(-pos).toFixed(1)+'px,0,0)'}
+  new IntersectionObserver(function(e){vis=e[0].isIntersecting;measure()},{threshold:0}).observe(strip);
+  window.addEventListener('resize',measure);
+  strip.addEventListener('mouseenter',function(){hover=true});strip.addEventListener('mouseleave',function(){hover=false});
+  strip.addEventListener('focusin',function(){hover=true});strip.addEventListener('focusout',function(){hover=false});
+  strip.addEventListener('pointerdown',function(e){if(e.button>0)return;drag=true;moved=0;sx=e.clientX;sp=pos;strip.classList.add('drag');try{strip.setPointerCapture(e.pointerId)}catch(_){}});
+  strip.addEventListener('pointermove',function(e){if(!drag)return;var dx=e.clientX-sx;moved=Math.max(moved,Math.abs(dx));pos=sp-dx;apply()});
+  function end(e){if(!drag)return;drag=false;strip.classList.remove('drag');resume=performance.now()+1800;
+    if(moved<7&&e&&e.type==='pointerup'){var el=document.elementFromPoint(e.clientX,e.clientY),b=el&&el.closest&&el.closest('.th');if(b)use(+b.dataset.n)}}
+  strip.addEventListener('pointerup',end);strip.addEventListener('pointercancel',end);
+  strip.addEventListener('click',function(e){if(e.detail===0){var b=e.target.closest('.th');if(b)use(+b.dataset.n)}});
+  (function loop(t){var dt=t0?Math.min(64,t-t0):16;t0=t;if(!drag&&!hover&&vis&&!reduce&&t>resume){pos+=dt*0.024;apply()}requestAnimationFrame(loop)})(0);
   function move(e){var r=im.getBoundingClientRect();var x=e.clientX-r.left,y=e.clientY-r.top;
     if(x<0||y<0||x>r.width||y>r.height){lp.classList.remove('on');return}
     var pr=lp.getBoundingClientRect();lp.classList.add('on');lens.style.left=(r.left-pr.left+x)+'px';lens.style.top=(r.top-pr.top+y)+'px';
@@ -775,20 +879,36 @@ document.addEventListener('keydown',function(e){if(e.key!=='Tab')return;var box=
 })();
 
 /* ---------- commissions examples, social, about ---------- */
-(function(){var h='';[[13,'Pet portrait'],[8,'Portrait'],[35,'Landscape']].forEach(function(p){var w=byN(p[0]);h+='<figure><img src="'+w.th+'" alt="'+esc(w.alt)+'" loading="lazy"><figcaption>'+p[1]+'</figcaption></figure>'});$('#ex').innerHTML=h;
-  var so=[['Instagram','@shamalka_fineart','https://www.instagram.com/shamalka_fineart/',15],['TikTok','@shamalka_fineart','https://www.tiktok.com/@shamalka_fineart',30],['YouTube','@ShamalkaFineArt','https://www.youtube.com/@ShamalkaFineArt',26],['Facebook','Shamalka.fineart','https://www.facebook.com/Shamalka.fineart/',13]];
-  $('#so').innerHTML=so.map(function(s){var w=byN(s[3]);return '<a href="'+s[2]+'" target="_blank" rel="noopener" aria-label="'+s[0]+' '+s[1]+'"><img src="'+w.th+'" alt="" loading="lazy"><div class="tx"><span>'+s[0]+'</span><small>'+s[1]+'</small></div></a>'}).join('');
-  var b=byN(15),B=$('#duoB');B.src=b.th;B.alt=b.alt})();
+var ICON={"instagram": "M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077", "tiktok": "M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z", "youtube": "M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z", "facebook": "M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"};
+(function(){var h='';[[13,'Pet portrait'],[6,'Portrait'],[35,'Landscape']].forEach(function(p){var w=byN(p[0]);h+='<figure><img src="'+w.th+'" alt="'+esc(w.alt)+'" loading="lazy"><figcaption>'+p[1]+'</figcaption></figure>'});$('#ex').innerHTML=h;
+  var so=[['Instagram','@shamalka_fineart','https://www.instagram.com/shamalka_fineart/',15,'instagram'],['TikTok','@shamalka_fineart','https://www.tiktok.com/@shamalka_fineart',30,'tiktok'],['YouTube','@ShamalkaFineArt','https://www.youtube.com/@ShamalkaFineArt',26,'youtube'],['Facebook','Shamalka.fineart','https://www.facebook.com/Shamalka.fineart/',13,'facebook']];
+  $('#so').innerHTML=so.map(function(s){var w=byN(s[3]);return '<a href="'+s[2]+'" target="_blank" rel="noopener" aria-label="'+s[0]+' '+s[1]+'"><img src="'+w.th+'" alt="" loading="lazy"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="'+ICON[s[4]]+'"/></svg></span><div class="tx"><span>'+s[0]+'</span><small>'+s[1]+'</small></div></a>'}).join('');
+  var b=byN(36),B=$('#duoB');B.src=b.th;B.alt=b.alt})();
 
-/* ---------- forms (preview only) ---------- */
-var sel=$('#a-art');W.forEach(function(w){var o=document.createElement('option');o.value=w.n;o.textContent=w.t+' ('+mediumOf(w)+')';sel.appendChild(o)});
+/* ---------- forms: delivered to the artist's inbox ---------- */
+var FORM_TO='spshamalka@gmail.com',FORM_URL='https://formsubmit.co/ajax/'+FORM_TO;
+var sel=$('#a-art');W.filter(function(w){return w.status==='available'}).forEach(function(w){var o=document.createElement('option');o.value=w.n;o.textContent=w.t+' ('+mediumOf(w)+(w.size?', '+w.size.split(' (')[0]:'')+')';sel.appendChild(o)});
 function setMode(m){$$('.seg button').forEach(function(b){b.setAttribute('aria-selected',b.dataset.m===m?'true':'false')});['commission','artwork','general'].forEach(function(k){$('#f-'+k).hidden=k!==m})}
 $$('.seg button').forEach(function(b){b.addEventListener('click',function(){setMode(b.dataset.m)})});
-$$('form').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();var st=$('.status',f),bad=null;
+function val(id){var e=document.getElementById(id);return e?e.value.trim():''}
+function payload(kind,f){var name=val(kind[0]+'-name'),email=val(kind[0]+'-email'),o={name:name,email:email,_replyto:email,_template:'table',_captcha:'false',_honey:''};
+  if(kind==='commission'){o._subject='Commission enquiry from '+name;o['Type of artwork']=val('c-type');o['Preferred medium']=val('c-med');o['Subject or description']=val('c-sub');o['Preferred size']=val('c-size');o['Budget (AUD)']=val('c-bud');o['Reference photo link']=val('c-photo');o['Preferred deadline']=val('c-date');o['Additional information']=val('c-more')}
+  else if(kind==='artwork'){var w=byN(+val('a-art'));o._subject='Artwork enquiry: '+(w?w.t:'')+' from '+name;o['Artwork']=w?(w.t+' (#'+w.n+', '+mediumOf(w)+(w.size?', '+w.size:'')+')'):'';o['Link']=w?SITE+'#art-'+w.n:'';o['Message']=val('a-msg')}
+  else{o._subject='Message from '+name;o['Message']=val('g-msg')}
+  o['Sent from']=location.href.split('#')[0];return o}
+$$('form').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();var st=$('.status',f),btn=$('button[type=submit]',f),bad=null,kind=f.dataset.kind;
+  if(f.dataset.busy)return;
   $$('[required]',f).forEach(function(i){var v=i.value.trim(),ok=i.type==='email'?/^\S+@\S+\.\S+$/.test(v):!!v;i.setAttribute('aria-invalid',ok?'false':'true');if(!ok&&!bad)bad=i});
-  if($('input[name=website]',f).value){return}
-  if(bad){st.textContent=bad.type==='email'?'Please enter a valid email address.':'Please complete the required field: '+bad.labels[0].textContent.replace('*','').trim()+'.';bad.focus();return}
-  st.textContent='Preview only: this form is not connected yet, so nothing was sent.'})});
+  var link=$('#c-photo');if(kind==='commission'&&link.value&&!/^https?:\/\//i.test(link.value.trim())){link.setAttribute('aria-invalid','true');bad=bad||link}
+  if($('input[name=website]',f).value){st.textContent='Thank you. Your message has been sent.';return}
+  if(bad){st.textContent=bad===link?'Please enter a full link starting with https://':(bad.type==='email'?'Please enter a valid email address.':'Please complete the required field: '+bad.labels[0].textContent.replace('*','').trim()+'.');bad.focus();return}
+  f.dataset.busy='1';btn.disabled=true;st.textContent='Sending…';
+  var ctl=window.AbortController?new AbortController():null,to=setTimeout(function(){if(ctl)ctl.abort()},20000);
+  fetch(FORM_URL,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload(kind,f)),signal:ctl?ctl.signal:undefined})
+   .then(function(r){return r.json().catch(function(){return {}}).then(function(j){if(!r.ok||(j.success!==true&&j.success!=='true'))throw new Error('fail');return j})})
+   .then(function(){f.reset();st.textContent='Thank you. Your '+(kind==='general'?'message':'enquiry')+' is on its way to Shamalka, and she will reply to your email address personally.'})
+   .catch(function(){st.innerHTML='Sorry, that did not send. Please try again, or email <a href="mailto:'+FORM_TO+'">'+FORM_TO+'</a> directly.'})
+   .then(function(){clearTimeout(to);delete f.dataset.busy;btn.disabled=false})})});
 
 /* ---------- privacy dialog ---------- */
 var dlg=$('#dlg');function openDlg(){lastFocus=document.activeElement;dlg.classList.add('open');document.body.style.overflow='hidden';$('#dlgx').focus()}
